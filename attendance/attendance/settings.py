@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'students.apps.StudentsConfig'
 ]
 
 ROOT_URLCONF = 'attendance.urls'
@@ -75,8 +76,11 @@ WSGI_APPLICATION = 'attendance.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Attendance',
+        'USER': 'sushen',
+        'PASSWORD': '123',
+        'HOST': 'localhost'
     }
 }
 
